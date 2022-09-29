@@ -1,51 +1,81 @@
-import React, { Fragment } from 'react'
-import './searchbar.css'
-import { useState } from 'react'
-import { FaSearch } from "react-icons/fa";
+import React from 'react';
+import { useState } from 'react';
+import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
+import { Container, Button } from 'react-bootstrap';
 
 const SearchBar = () => {
-    const [filter,setFilter] = useState({
-      typeContract:'',
-      numbeOfAmbients:'',
-      price:'',
-      city:'',
-    })
-    const handleChange = (e)=>{
-      setFilter(prev=>({
-            ...prev,
-            [e.target.id]:e.target.value
-        }))
-        console.log(filter)
-    }
+  const [filter, setFilter] = useState({
+    typeContract: '',
+    numbeOfAmbients: '',
+    price: '',
+    city: '',
+  });
+  const handleChange = (e) => {
+    setFilter((prev) => ({
+      ...prev,
+      [e.target.id]: e.target.value,
+    }));
+    console.log(filter);
+  };
 
-    const submitSearch =()=>{
-      console.log(filter);
-    }
+  const submitSearch = () => {
+    console.log(filter);
+  };
 
   return (
-    <div class="cinputSearch">
-      <input placeholder='¿A donde quieres mudarte?' id="city" onChange={handleChange} aria-label="Large" aria-describedby="inputGroup-sizing-sm" class="input-seach roundedE"></input>
-      <select placeholder='Tipo de inmueble' id="optionProperty" onChange={handleChange} className="height70 margin10 roundedE">
-        <option value="apartment">Departamento</option>
-        <option value="hostel">Hostel</option>
-        <option value="house">Casa</option>
-        <option value="ph">PH</option>
-      </select>
-      <select id='typeContract' onChange={handleChange} className="height70 margin10 roundedE">
-        <option value="cmpar">Compar</option>
-        <option value="alquilar">Alquilar</option>
-      </select>
-      <select id="numbeOfAmbients" onChange={handleChange} className="height70 margin10 roundedE">
-        <option value="1" >1 ambiente</option>
-        <option value="2">2 ambientes</option>
-        <option value="3">3 ambientes</option>
-      </select>
-        <input placeholder='Precio' className="height70 margin10 roundedE" id='price' type="number"></input>
-      <FaSearch size={34} className="btnSearch" onClick={()=>submitSearch()}/> 
-    </div>
-  )
-}
+    <Container>
+      <Form>
+        <Row xs={1} md={6}>
+          <Col>
+            <Form.Control
+              placeholder="¿A donde quieres mudarte?"
+              d="city"
+              onChange={handleChange}
+            />
+          </Col>
+          <Col>
+            <Form.Select
+              placeholder="Tipo de inmueble"
+              id="optionProperty"
+              onChange={handleChange}
+            >
+              <option value="apartment">Departamento</option>
+              <option value="hostel">Hostel</option>
+              <option value="house">Casa</option>
+              <option value="ph">PH</option>
+            </Form.Select>
+          </Col>
+          <Col>
+            <Form.Select id="typeContract" onChange={handleChange}>
+              <option value="comprar">Comprar</option>
+              <option value="alquilar">Alquilar</option>
+            </Form.Select>
+          </Col>
+          <Col>
+            <Form.Select id="numbeOfAmbients" onChange={handleChange}>
+              <option value="1">1 ambiente</option>
+              <option value="2">2 ambientes</option>
+              <option value="3">3 ambientes</option>
+            </Form.Select>
+          </Col>
+          <Col>
+            <Form.Control
+              placeholder="Precio"
+              id="price"
+              type="number"
+            ></Form.Control>
+          </Col>
+          <Col xs="auto">
+            <Button variant="outline-success" onClick={() => submitSearch()}>
+              Buscar
+            </Button>
+          </Col>
+        </Row>
+      </Form>
+    </Container>
+  );
+};
 
-export default SearchBar
-
-
+export default SearchBar;

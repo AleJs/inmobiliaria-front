@@ -1,8 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import SearchBar from '../components/SearchBar/SearchBar'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Container, Stack, Button } from 'react-bootstrap';
-import { LOGIN, PRIVATE } from '../routes/path'
+import { LOGIN, PRIVATE } from '../routes/path';
 
 const Home = () => {
   return (
@@ -20,4 +19,4 @@ const Home = () => {
   );
 };
 
-export default Home
+export default Home;
