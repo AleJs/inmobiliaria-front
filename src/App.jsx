@@ -25,10 +25,7 @@ function App() {
             <Route index element={<Profile />} />
             <Route path={LOGOUT} element={<Logout />} />
           </Route>
-          <Route path={PRIVATE} element={<PrivateRoute/>}>
-              <Route index element={<Profile/>}/>
-              <Route path={LOGOUT} element={<Logout/>}/>
-           </Route>
+        
 
         </Routes>
       </BrowserRouter>
