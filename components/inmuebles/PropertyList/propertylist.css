@@ -1,0 +1,7 @@
+.listPropertys{
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
