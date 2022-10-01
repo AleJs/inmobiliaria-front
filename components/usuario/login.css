@@ -1,0 +1,47 @@
+.background{
+   
+    background-image: url("https://mdbootstrap.com/img/new/fluid/city/018.jpg");
+    max-width: 100%;
+  height: auto;
+  background-size: cover;
+  /* filter: brightness(50%); */
+  width: 100%;
+}
+
+.form {
+    z-index: 15;
+    position: relative;
+    background: #FFFFFF;
+    width: 600px;
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin: 100px auto 10px;
+    overflow: hidden;
+    }
+    .label{
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: rgb(43, 39, 39);
+        font-weight: 700;
+    }
+
+    .control {
+        
+    height: 48px;
+    background: #fff;
+    color: #000;
+    font-size: 16px;
+    border-radius: 5px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid rgba(0,0,0,.1);
+    }
+
+
+    .caja2{
+        width: 100%;
+    height: auto;
+    max-width: 55%;
+    }
