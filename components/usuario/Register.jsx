@@ -103,15 +103,15 @@ const register = () => {
                     />
                   </Form.Group>
                 </div>
-                <div className="row"></div>
+               
 
                 <div className="row mb-3 m-2 d-flex justify-content-center">
                   <Button variant="primary" className="col-5" type="submit">
                     Register
                   </Button>
                 </div>
-                <div className="row d-flex m-2 justify-content-between">
-                  <Button variant="warning" className=" col-2" style={{borderRadius:"1px"}} as={Link} to={HOME}>
+                <div className=" row d-flex m-2 justify-content-between align-items-center">
+                  <Button variant="warning" className="h-100  col-2" style={{borderRadius:"1px"}} as={Link} to={HOME}>
                     <span>Back</span>
                   </Button>
                   <Button variant="link " className="  col-4" as={Link} to={LOGIN}>

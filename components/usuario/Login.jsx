@@ -6,6 +6,7 @@ import {
   Stack,
   Spinner,
   Alert,
+  Image
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { HOME, REGISTER } from "../../routes/path";
@@ -41,7 +42,6 @@ const Login = () => {
 
     //api aws
     let responseApi = await formLogin(loginData);
-
     validToken(responseApi);
     // seterrorMsg(response.data.message);
     // hook validar token
@@ -55,8 +55,8 @@ const Login = () => {
     } else {
       divRef.current.style.display = "initial";
       spinnerRef.current.style.display = "none";
-
-      setErrorMsg(data.message);
+    
+      setErrorMsg(data);
     }
   };
 
@@ -69,7 +69,7 @@ const Login = () => {
         <div className="d-flex justify-content-center shadow-lg p-1 caja2 bg-body rounded border ">
           <div className="row " style={{ width: "100%" }}>
             <div className="col align-self-center  justify-content-center d-flex ">
-              <img src={logo} alt="" width="100%" height="auto" />
+              <Image src={logo} className="rounded" alt="" width="100%" height="auto" />
             </div>
             <div className="col align-self-center  ">
               <Form onSubmit={handleSubmit} className="w-100 m-auto  ">
@@ -103,7 +103,7 @@ const Login = () => {
                   />
                 </Form.Group>
 
-                <Stack gap="4" className="col-lg-20 mx-auto">
+                <Stack  className="col-lg-20 mx-auto">
                   <Button variant="primary"  className="" type="submit">
                     <span ref={divRef}>Submit</span>
                     {errorMsg != "" ? (
