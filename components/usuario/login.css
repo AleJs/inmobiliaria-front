@@ -38,8 +38,10 @@
     box-shadow: none;
     border: 1px solid rgba(0,0,0,.1);
     }
+
+
     .caja2{
         width: 100%;
     height: auto;
-    max-width: 60%;
+    max-width: 55%;
     }
