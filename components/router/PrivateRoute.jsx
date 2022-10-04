@@ -11,6 +11,7 @@ export default function PrivateRoute() {
 
     return (
         <div>
+            
             <Outlet/>
         </div>
     )

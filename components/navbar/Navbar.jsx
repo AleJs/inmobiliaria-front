@@ -28,7 +28,7 @@ export const NavigationBar = () => {
           <Nav className="me-auto">
             <Nav.Link href="#features">Alquilar</Nav.Link>
             <Nav.Link href="#pricing">Contacto</Nav.Link>
-            <Nav.Link href="#terminos">Términos y condiciones</Nav.Link>
+            <Nav.Link as={Link} to="/quienes-somos" href="#terminos">Términos y condiciones</Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link as={Link} to={LOGIN}>
